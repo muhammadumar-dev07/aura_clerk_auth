@@ -2,6 +2,8 @@ import React from 'react';
 import { Show, SignIn } from '@clerk/react';
 import Dashboard from './pages/Dashboard';
 import { Store } from 'lucide-react';
+import { FaStore } from 'react-icons/fa'
+import { AiFillBell, AiFillMessage, AiFillShopping } from 'react-icons/ai'
 
 export default function App() {
   return (
@@ -14,8 +16,14 @@ export default function App() {
             </div>
             <h1 className="text-2xl font-bold text-ink tracking-tight mb-1 text-center">Aura Store Admin</h1>
             <p className="text-sm text-muted mb-6 text-center">Sign in to access your e-commerce dashboard</p>
-            <SignIn 
-              fallbackRedirectUrl="/dashboard" 
+            {/* <div>
+              <FaStore />
+              <AiFillShopping />
+              <AiFillBell />
+              <AiFillMessage />
+            </div> */}
+            <SignIn
+              fallbackRedirectUrl="/dashboard"
               forceRedirectUrl="/dashboard"
               appearance={{
                 elements: {
